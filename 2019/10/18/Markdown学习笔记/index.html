@@ -63,10 +63,12 @@
 <meta property="og:site_name" content="云端大脑">
 <meta property="og:description" content="Markdown是一种一种流行的轻量级标记语言，很多网站和博客系统都支持。它适合用来快速码字排版，比如我学习它就是为了用来写这个博客。本篇文章就是使用费曼学习法，通过输出知识来学习知识的本身😎">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-20T16:37:25.190Z">
+<meta property="og:image" content="http://yoursite.com/uploads/avatar.jpg">
+<meta property="og:updated_time" content="2019-10-20T18:19:58.673Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown学习笔记">
 <meta name="twitter:description" content="Markdown是一种一种流行的轻量级标记语言，很多网站和博客系统都支持。它适合用来快速码字排版，比如我学习它就是为了用来写这个博客。本篇文章就是使用费曼学习法，通过输出知识来学习知识的本身😎">
+<meta name="twitter:image" content="http://yoursite.com/uploads/avatar.jpg">
   <link rel="canonical" href="http://yoursite.com/2019/10/18/Markdown学习笔记/">
 
 
@@ -269,7 +271,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-21 00:37:25" itemprop="dateModified" datetime="2019-10-21T00:37:25+08:00">2019-10-21</time>
+                <time title="修改时间：2019-10-21 02:19:58" itemprop="dateModified" datetime="2019-10-21T02:19:58+08:00">2019-10-21</time>
               </span>
             
           
@@ -459,7 +461,7 @@
 </li>
 <li>
 <p>代码块用一对三个反引号```标记，如果想要获得某些Markdown渲染器的语法高亮，可以选择在第一个```后面加上语言的名称</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="code">```) javascript</span></span><br><span class="line"><span class="code">var str = "hello world";</span></span><br><span class="line"><span class="code">console.log(str);</span></span><br><span class="line"><span class="code">(```)</span></span><br><span class="line"><span class="code">&lt;!-- </span></span><br><span class="line"><span class="code">这里是为了避免语法错误，正确写法应去掉括号，Hexo在代码块里面写代码块不能正常显示</span></span><br><span class="line"><span class="code">--&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">``` javascript</span></span><br><span class="line"><span class="code">var str = "hello world";</span></span><br><span class="line"><span class="code">console.log(str);</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
 </li>
 <li>
@@ -468,6 +470,11 @@
 <pre><code>var str = &quot;hello world&quot;;
 console.log(str);
 </code></pre>
+</li>
+<li>
+<p>如果你想在代码块里面加入反引号 ` ，你只需要保证外面那层的反引号数量多于里面的</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">```` markdown</span></span><br><span class="line"><span class="code">``` javascript</span></span><br><span class="line"><span class="code">console.log("套娃");</span></span><br><span class="line"><span class="code">```</span></span><br><span class="line"><span class="code">````</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">``` javascript</span></span><br><span class="line"><span class="code">console.log("套娃");</span></span><br><span class="line"><span class="code">```</span></span><br></pre></td></tr></table></figure>
 </li>
 </ol>
 <h1 id="链接"><a class="markdownIt-Anchor" href="#链接"></a> 链接</h1>
@@ -479,19 +486,29 @@ console.log(str);
 或者<br>
 <code>[显示的内容](地址 &quot;地址标题&quot;)</code></p>
 <p>鼠标移动到链接的时候会显示地址标题</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https//baidu.com</span>)  </span><br><span class="line">[<span class="string">谷歌</span>](<span class="link">https//goole.com "在国内需要VPN"</span>)</span><br></pre></td></tr></table></figure>
-<p><a href="https//www.baidu.com">百度</a><br>
-<a href="https//www.goole.com" title="在国内需要VPN">谷歌</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https://www.baidu.com</span>)  </span><br><span class="line">[<span class="string">谷歌</span>](<span class="link">//www.goole.com "在国内需要VPN"</span>)</span><br></pre></td></tr></table></figure>
+<p><a href="https://www.baidu.com" target="_blank" rel="noopener">百度</a><br>
+<a href="//www.goole.com" title="在国内需要VPN">谷歌</a></p>
 </li>
 <li>
 <p>参考式</p>
-<p>先写 <code>[显示的内容][标记]</code> 然后再文件任何地方加入链接的内容定义 <code>[标记]: 地址 &quot;地址标题&quot;</code></p>
+<p>先写链接 <code>[显示的内容][标记]</code> 然后再文件任何地方加入链接的内容定义 <code>[标记]: 地址 &quot;地址标题&quot;</code><br>
+<small>不过也有的渲染器需要在这两者之间加入空行</small></p>
 <p>注意标记的匹配，不区分大小写。地址标题可以用单引号、双引号或者括号包起来，也可省略不写。地址也可以用尖括号包起来</p>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Facebook</span>][<span class="symbol">1</span>]  </span><br><span class="line">[<span class="string">Github</span>][<span class="symbol">2</span>]  </span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https//www.facebook.com "虚假的社交网站"  </span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">https//www.github.com "真正的交友网站"</span></span><br></pre></td></tr></table></figure>
-<p><a href="https//facebook.com" title="虚假的社交网站">Facebook</a><br>
-<a href="https//github.com" title="真正的交友网站">Github</a></p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Facebook</span>][<span class="symbol">1</span>]  </span><br><span class="line">[<span class="string">Github</span>][<span class="symbol">2</span>]  </span><br><span class="line"></span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https://www.facebook.com "虚假的社交网站"  </span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">https://www.github.com "真正的交友网站"</span></span><br></pre></td></tr></table></figure>
+<p><a href="https://www.facebook.com" title="虚假的社交网站" target="_blank" rel="noopener">Facebook</a><br>
+<a href="https://www.github.com" title="真正的交友网站" target="_blank" rel="noopener">Github</a></p>
+<p>你甚至可以省去标记，把显示的内容当作标记</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">代码块</span>][<span class="symbol"></span>]  </span><br><span class="line"></span><br><span class="line">[<span class="symbol">代码块</span>]: <span class="link">#代码块</span></span><br></pre></td></tr></table></figure>
+<p><a href="#%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</a></p>
 </li>
 </ol>
+<p>关于URL地址的使用技巧可以参考<a href="https://developer.mozilla.org/zh-CN/docs/Learn/Common_questions/What_is_a_URL#%E7%BB%9D%E5%AF%B9URL%E5%92%8C%E7%9B%B8%E5%AF%B9URL" target="_blank" rel="noopener">MDN的教程</a></p>
+<h1 id="图片"><a class="markdownIt-Anchor" href="#图片"></a> 图片</h1>
+<p>图片和链接一样的标记也有行内式和参考式，我只展示行内式</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">Young的头像</span>](<span class="link">/uploads/avatar.jpg</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/uploads/avatar.jpg" alt="Young的头像"></p>
+<p>Markdown暂时还不支持设置图片的长宽，你可以用html的<code>&lt;img&gt;</code>来代替</p>
 
     </div>
 
@@ -574,7 +591,7 @@ console.log(str);
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体样式"><span class="nav-number">4.</span> <span class="nav-text"> 字体样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">5.</span> <span class="nav-text"> 删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#被兼容的html标签"><span class="nav-number">6.</span> <span class="nav-text"> 被兼容的HTML标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用块"><span class="nav-number">8.</span> <span class="nav-text"> 引用块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">9.</span> <span class="nav-text"> 代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">10.</span> <span class="nav-text"> 链接</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体样式"><span class="nav-number">4.</span> <span class="nav-text"> 字体样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">5.</span> <span class="nav-text"> 删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#被兼容的html标签"><span class="nav-number">6.</span> <span class="nav-text"> 被兼容的HTML标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用块"><span class="nav-number">8.</span> <span class="nav-text"> 引用块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">9.</span> <span class="nav-text"> 代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">10.</span> <span class="nav-text"> 链接</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#图片"><span class="nav-number">11.</span> <span class="nav-text"> 图片</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
