@@ -228,6 +228,24 @@ NexT.utils = {
     });
   },
 
+  // 让自建的a标签跳到转业内标题也有动画
+  registerInnerLinkItem: function() {
+    const innerLinkItems = document.querySelectorAll('a[href^="#"]:not([class])');
+    innerLinkItems.forEach(function(element){
+      element.addEventListener('click', event => {
+        event.preventDefault();
+        var target = document.getElementById(decodeURI(event.currentTarget.getAttribute('href').replace('#', '')));
+        var offset = target.getBoundingClientRect().top + window.scrollY;
+        window.anime({
+          targets  : [document.documentElement, document.body],
+          duration : 500,
+          easing   : 'linear',
+          scrollTop: offset + 10
+        });
+      });
+    })
+  },
+
   registerSidebarTOC: function() {
     const navItems = document.querySelectorAll('.post-toc li');
     const sections = [...navItems].map(element => {

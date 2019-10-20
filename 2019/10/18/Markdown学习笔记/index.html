@@ -63,7 +63,7 @@
 <meta property="og:site_name" content="云端大脑">
 <meta property="og:description" content="Markdown是一种一种流行的轻量级标记语言，很多网站和博客系统都支持。它适合用来快速码字排版，比如我学习它就是为了用来写这个博客。本篇文章就是使用费曼学习法，通过输出知识来学习知识的本身😎">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-19T18:33:27.710Z">
+<meta property="og:updated_time" content="2019-10-20T16:37:25.190Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Markdown学习笔记">
 <meta name="twitter:description" content="Markdown是一种一种流行的轻量级标记语言，很多网站和博客系统都支持。它适合用来快速码字排版，比如我学习它就是为了用来写这个博客。本篇文章就是使用费曼学习法，通过输出知识来学习知识的本身😎">
@@ -269,7 +269,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-20 02:33:27" itemprop="dateModified" datetime="2019-10-20T02:33:27+08:00">2019-10-20</time>
+                <time title="修改时间：2019-10-21 00:37:25" itemprop="dateModified" datetime="2019-10-21T00:37:25+08:00">2019-10-21</time>
               </span>
             
           
@@ -352,7 +352,7 @@
 <br>
 <h1 id="段落和换行"><a class="markdownIt-Anchor" href="#段落和换行"></a> 段落和换行</h1>
 <p>Markdown段落由一个或多个文本行组成，它的前后要有一个或以上的空行来换行（看不见东西就算空行，有<kbd>Space</kbd>和<kbd>Tab</kbd>也不影响是不是空行）</p>
-<p><strong>注意：写MD的时候，普通段落不建议用<kbd>Space</kbd>或<kbd>Tab</kbd>缩进，因为四个空格会被识别成代码块！</strong></p>
+<p><strong>注意：写MD的时候，普通段落不建议用<kbd>Space</kbd>或<kbd>Tab</kbd>缩进，因为四个空格会被识别成<a href="#%E4%BB%A3%E7%A0%81%E5%9D%97">代码块</a>！</strong></p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">段落一</span><br><span class="line">&lt;!-- 空行 --&gt;</span><br><span class="line">段落二</span><br></pre></td></tr></table></figure>
 <p>段落一</p>
 <p>段落二</p>
@@ -363,7 +363,7 @@
 <p>Hexo的Markdown用法不同，想强制换行直接<kbd>Enter</kbd>就行✌</p>
 <p>不过写的时候还是推荐用标准的语法，不然你在其他地方写（比如我写MD的VS Code）Markdown的时候可能会不适应</p>
 <h1 id="分割线"><a class="markdownIt-Anchor" href="#分割线"></a> 分割线</h1>
-<p>同一行中用<strong>三个或以上</strong>的*或者_即可标记分割线，中间可以穿插空格</p>
+<p>同一行中用<strong>三个或以上</strong>的*或者-即可标记分割线，中间可以穿插空格</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="emphasis">***</span></span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <hr>
 <hr>
@@ -419,9 +419,20 @@
 </li>
 </ol>
 <p>两个列表项目之间可以用空行分开，列表项目会被</p><p>包起来，但是效果没有什么不同</p>
-<p>列表还可以嵌套多个段落、代码块、区块引用等，</p>
-<h1 id="区块引用"><a class="markdownIt-Anchor" href="#区块引用"></a> 区块引用</h1>
-<p>如果你想表示一些内容引用自其他地方，你可以用&gt;标记区块引用。区块引用可以嵌套，区块内也可以使用其他Markdown语法</p>
+<p>列表还可以嵌套多个段落、列表、代码块、引用块等。嵌套的时候注意要与列表项目第一段进行缩进对齐，才能识别为同一个列表项目。</p>
+<p>举个🌰：</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.  </span>举个🌰：  </span><br><span class="line"><span class="code">    举个🌰：  </span></span><br><span class="line"><span class="bullet">    1.  </span>🌰</span><br><span class="line"><span class="bullet">    2.  </span>👆</span><br></pre></td></tr></table></figure>
+<ol>
+<li>举个🌰：<br>
+举个🌰：
+<ol>
+<li>🌰</li>
+<li>👆</li>
+</ol>
+</li>
+</ol>
+<h1 id="引用块"><a class="markdownIt-Anchor" href="#引用块"></a> 引用块</h1>
+<p>如果你想表示一些内容引用自其他地方，你可以用&gt;标记区块引用。和列表一样，区块引用可以嵌套，区块内也可以使用其他Markdown语法</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 勇士总冠军 —— 鲁迅</span></span><br><span class="line"><span class="quote">&gt; &gt; 我没说过这句话 —— 鲁迅</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>勇士总冠军 —— 鲁迅</p>
@@ -438,6 +449,49 @@
 老僧已死成新塔，坏壁无由见旧题。<br>
 往日崎岖还记否，路人长困蹇驴嘶。</p>
 </blockquote>
+<h1 id="代码块"><a class="markdownIt-Anchor" href="#代码块"></a> 代码块</h1>
+<p>如果你想插入一些代码，你可以用代码块来标记。</p>
+<ol>
+<li>
+<p>行内代码用一对反引号`标记</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Javascript可以用 <span class="code">`console.log("")`</span> 来输出</span><br></pre></td></tr></table></figure>
+<p>Javascript可以用 <code>console.log(&quot;&quot;)</code> 来输出</p>
+</li>
+<li>
+<p>代码块用一对三个反引号```标记，如果想要获得某些Markdown渲染器的语法高亮，可以选择在第一个```后面加上语言的名称</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(<span class="code">```) javascript</span></span><br><span class="line"><span class="code">var str = "hello world";</span></span><br><span class="line"><span class="code">console.log(str);</span></span><br><span class="line"><span class="code">(```)</span></span><br><span class="line"><span class="code">&lt;!-- </span></span><br><span class="line"><span class="code">这里是为了避免语法错误，正确写法应去掉括号，Hexo在代码块里面写代码块不能正常显示</span></span><br><span class="line"><span class="code">--&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> str = <span class="string">"hello world"</span>;</span><br><span class="line"><span class="built_in">console</span>.log(str);</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>除此之外代码块还可以用四个空格或制表符缩进来表示，一个代码区块会一直持续到没有缩进的那一行</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 四个空格或制表符 --&gt;var str = "hello world";</span><br><span class="line">&lt;!-- 四个空格或制表符 --&gt;console.log(str);</span><br></pre></td></tr></table></figure>
+<pre><code>var str = &quot;hello world&quot;;
+console.log(str);
+</code></pre>
+</li>
+</ol>
+<h1 id="链接"><a class="markdownIt-Anchor" href="#链接"></a> 链接</h1>
+<p>Markdown支持两种链接的标记方法：<strong>行内式</strong>和<strong>参考式</strong></p>
+<ol>
+<li>
+<p>行内式：</p>
+<p><code>[显示的内容](地址)</code><br>
+或者<br>
+<code>[显示的内容](地址 &quot;地址标题&quot;)</code></p>
+<p>鼠标移动到链接的时候会显示地址标题</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">百度</span>](<span class="link">https//baidu.com</span>)  </span><br><span class="line">[<span class="string">谷歌</span>](<span class="link">https//goole.com "在国内需要VPN"</span>)</span><br></pre></td></tr></table></figure>
+<p><a href="https//www.baidu.com">百度</a><br>
+<a href="https//www.goole.com" title="在国内需要VPN">谷歌</a></p>
+</li>
+<li>
+<p>参考式</p>
+<p>先写 <code>[显示的内容][标记]</code> 然后再文件任何地方加入链接的内容定义 <code>[标记]: 地址 &quot;地址标题&quot;</code></p>
+<p>注意标记的匹配，不区分大小写。地址标题可以用单引号、双引号或者括号包起来，也可省略不写。地址也可以用尖括号包起来</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">Facebook</span>][<span class="symbol">1</span>]  </span><br><span class="line">[<span class="string">Github</span>][<span class="symbol">2</span>]  </span><br><span class="line">[<span class="symbol">1</span>]: <span class="link">https//www.facebook.com "虚假的社交网站"  </span></span><br><span class="line">[<span class="symbol">2</span>]: <span class="link">https//www.github.com "真正的交友网站"</span></span><br></pre></td></tr></table></figure>
+<p><a href="https//facebook.com" title="虚假的社交网站">Facebook</a><br>
+<a href="https//github.com" title="真正的交友网站">Github</a></p>
+</li>
+</ol>
 
     </div>
 
@@ -520,7 +574,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体样式"><span class="nav-number">4.</span> <span class="nav-text"> 字体样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">5.</span> <span class="nav-text"> 删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#被兼容的html标签"><span class="nav-number">6.</span> <span class="nav-text"> 被兼容的HTML标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#区块引用"><span class="nav-number">8.</span> <span class="nav-text"> 区块引用</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#标题"><span class="nav-number">1.</span> <span class="nav-text"> 标题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#段落和换行"><span class="nav-number">2.</span> <span class="nav-text"> 段落和换行</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分割线"><span class="nav-number">3.</span> <span class="nav-text"> 分割线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#字体样式"><span class="nav-number">4.</span> <span class="nav-text"> 字体样式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#删除线"><span class="nav-number">5.</span> <span class="nav-text"> 删除线</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#被兼容的html标签"><span class="nav-number">6.</span> <span class="nav-text"> 被兼容的HTML标签</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#列表"><span class="nav-number">7.</span> <span class="nav-text"> 列表</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#引用块"><span class="nav-number">8.</span> <span class="nav-text"> 引用块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#代码块"><span class="nav-number">9.</span> <span class="nav-text"> 代码块</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#链接"><span class="nav-number">10.</span> <span class="nav-text"> 链接</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
