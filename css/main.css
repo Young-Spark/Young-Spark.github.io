@@ -1169,7 +1169,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #3e52a4;
+  background: #17f667;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2485,4 +2485,23 @@ hr {
     text-align: center;
     width: auto;
   }
+}
+input[type="checkbox"] {
+  display: none !important;
+}
+input[type="checkbox"] + label::before {
+  content: '\a0';
+  display: inline-block;
+  margin-right: 0.5em;
+  border: 1px solid;
+  border-radius: 0.2em;
+  width: 1em;
+  height: 1em;
+  font-size: 0.8em;
+  vertical-align: 0.05em;
+  text-indent: 0.2em;
+  line-height: 1em;
+}
+input[type="checkbox"]:checked + label::before {
+  content: '\2713';
 }
