@@ -1,0 +1,33 @@
+{
+  "ret": true,
+  "data": {
+    "sightName": "故宫(AAAAA景区)",
+    "bannerImg": "http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_600x330_f922b488.jpg",
+    "gallaryImgs": ["http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_r_800x800_6edd8174.jpg", "http://img1.qunarzz.com/sight/p0/1909/4e/4e1afc2e1133ade7a3.img.jpg_r_800x800_d3eb324d.jpg"],
+    "categoryList":  [{
+      "title": "成人票",
+      "children": [{
+        "title": "故宫成人票大门票+手机电子讲解 刷身份证进入",
+        "children": [{
+          "title": "去哪儿官方"
+        }]
+      }, {
+        "title": "故宫成人门票+手机电子讲解+身份证/护照等证件快速入院"
+      }, {
+        "title": "故宫门票成人票(fx,上午场-旺季)"
+      }, {
+        "title": "【上午场】故宫成人票大门票+手机电子讲解"
+      }]
+    }, {
+      "title": "学生票",
+      "children": [{
+        "title": "故宫门票学生票(fx,上午场-旺季)"
+      }]
+    }, {
+      "title": "老人票",
+      "children": [{
+        "title": "故宫门票老人票(fx,上午场-旺季)"
+      }]
+    }]
+  }
+}
